@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking for {{ tour.name }}</title>
+</head>
+<body>
+    <h1>Booking for {{ tour.name }}</h1>
+    <form method="POST">
+        Name: <input type="text" name="name" required><br><br>
+        Email: <input type="email" name="email" required><br><br>
+        Number of People: <input type="number" name="people" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <br><a href="{{ url_for('index') }}">Back to Tours</a>
+</body>
+</html>

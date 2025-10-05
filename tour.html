@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ tour.name }}</title>
+</head>
+<body>
+    <h1>{{ tour.name }}</h1>
+    <p><strong>Location:</strong> {{ tour.location }}</p>
+    <p><strong>Price:</strong> ₹{{ tour.price }}</p>
+    <p>{{ tour.description }}</p>
+    <a href="{{ url_for('booking', tour_id=tour.id) }}">Book Now</a>
+    <br><a href="{{ url_for('index') }}">Back to Tours</a>
+</body>
+</html>

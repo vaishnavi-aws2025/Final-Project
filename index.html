@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel & Tourism</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Available Tours</h1>
+    <ul>
+        {% for tour in tours %}
+        <li>
+            <a href="{{ url_for('tour_detail', tour_id=tour.id) }}">{{ tour.name }}</a> - {{ tour.location }} - ₹{{ tour.price }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
